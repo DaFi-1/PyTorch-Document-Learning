@@ -5,7 +5,7 @@
 | ---------------------- | ----------------- |
 | Data de Início         | 14 /06 / 2026     |
 | Data de Finalizacao    | em progresso      |
-| Horas de Estudo        | 3h                |
+| Horas de Estudo        | 4h                |
 | Exercícios Realizados  | 0                 |
 | Projetos Desenvolvidos | 0                 |
 | Tópicos Concluídos     | 0 / 8             |
@@ -294,7 +294,7 @@ x[mask] → filtro
 
 #### 📌 Exercício 1: Inicialização e Atributos
 
-Crie uma lista Python bidimensional \(3 \times 3\) com valores inteiros sequenciais (de 1 a 9).
+Crie uma lista Python bidimensional 3x3 com valores inteiros sequenciais (de 1 a 9).
 
 Converta essa lista diretamente em um tensor PyTorch.
 
@@ -370,51 +370,13 @@ Modifique o NumPy usando `np.add(..., out=...)` e observe o impacto no tensor.
 
 
 
+### 2 - Conjuntos de Dados e Carregadores de Dados - ler denovo
 
+### 3 - Transforma - ler denovo
 
+### 4 - Construir Modelo - ler denovo
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 4 - Diferenciação Automática -
 
 
 
@@ -475,21 +437,30 @@ Como concatenar tensores ----------------------------------------------- torch.c
 
 ```
 
+## FlashCard - 2
+
+```python
 
 
 
+Qual api eu uso para criarr NeuralNetwork ---------------------- torch.nn
+Qual o pacote pricinpal do pytorch ----------------------------- torch
+Qual alternativa mais desafiadora ao MNIST --------------------- Fashion-MNIST
+Quais eram os dados do MNIST ----------------------------------- imagens de dígitos manuscritos de 0 a 9
+Fashion-MNIST tem repositrio ----------------------------------- sim
+Uma classe Dataset personalizada deve implementar 3 funções ---- __init__ , __len__ e __getitem__ .
+Os recursos do FashionMNIST estão no formato de imagem --------- PIL
+O que formato de imagem PIL ------------------------------------ (Python Imaging Library) da biblioteca Pillow
+O que faz torchvision.transforms.v2.ToImage -------------------- Converte PIL ou NumPy para torchvision.tv_tensors.Image
+Como criar mihha propria NeuralNetwork ------------------------- herdar nn.Module
 
+Tensor Creation Ops -------------------------------------------- torch.tensor()
+                                                                 torch.zeros()
+                                                                 torch.ones()
+                                                                 torch.full()
+                                                                 torch.empty()
+                                                                 torch.eye()
 
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
