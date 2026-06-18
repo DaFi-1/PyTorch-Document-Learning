@@ -5,43 +5,15 @@ from torchvision.transforms import v2
 import matplotlib.pyplot as plt
 
 
-training_data = datasets.FashionMNIST(
-    root="data",
-    train=True,
-    download=True,
-    transform=v2.Compose([v2.ToImage(), v2.ToDtype(torch.float32, scale=True)])
-)
 
-test_data = datasets.FashionMNIST(
-    root="data",
-    train=False,
-    download=True,
-    transform=v2.Compose([v2.ToImage(), v2.ToDtype(torch.float32, scale=True)])
-)
-
-labels_map = {
-    0: "T-Shirt",
-    1: "Trouser",
-    2: "Pullover",
-    3: "Dress",
-    4: "Coat",
-    5: "Sandal",
-    6: "Shirt",
-    7: "Sneaker",
-    8: "Bag",
-    9: "Ankle Boot",
-}
-figure = plt.figure(figsize=(8, 8))
-cols, rows = 3, 3
-for i in range(1, cols * rows + 1):
-    sample_idx = torch.randint(len(training_data), size=(1,)).item()
-    img, label = training_data[sample_idx]
-    figure.add_subplot(rows, cols, i)
-    plt.title(labels_map[label])
-    plt.axis("off")
-    plt.imshow(img.squeeze(), cmap="gray")
-plt.show()
-
+x = torch.ones(3, 3)
+y = torch.ones(3, 3, requires_grad=True)
+z = x * y
+zz = x @ y
+print(z.grad_fn)
+print(zz.grad_fn)
+<MulBackward0 object at 0x7fc422703400>
+<MmBackward0 object at 0x7fc422703400>
 
 
 ## Baseados em outros tensores
@@ -56,12 +28,6 @@ plt.show()
 #range
 #linspace
 #logspace
-#
-## Conversão de dados externos
-#from_numpy
-#from_dlpack
-#frombuffer
-#from_file
 #
 ## Tensores esparsos (Sparse)
 #sparse_coo_tensor

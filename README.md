@@ -5,7 +5,7 @@
 | ---------------------- | ----------------- |
 | Data de Início         | 14 /06 / 2026     |
 | Data de Finalizacao    | em progresso      |
-| Horas de Estudo        | 4h                |
+| Horas de Estudo        | 6h                | pomodoro (1h)
 | Exercícios Realizados  | 0                 |
 | Projetos Desenvolvidos | 0                 |
 | Tópicos Concluídos     | 0 / 8             |
@@ -18,7 +18,7 @@
 * [2. Conjuntos de Dados e Carregadores de Dados](https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html)
 * [3. Transforma](https://docs.pytorch.org/tutorials/beginner/basics/transforms_tutorial.html)
 * [4. Construir Modelo](https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html)
-* [5. Diferenciação Automática](https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html)
+* [5. Diferenciação Automática](https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html) - FlashCard 1 - ✅
 * [6. Loop de Otimização](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html)
 * [7. Salvar, Carregar e Usar o Modelo](https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html)
 
@@ -370,18 +370,64 @@ Modifique o NumPy usando `np.add(..., out=...)` e observe o impacto no tensor.
 
 
 
-### 2 - Conjuntos de Dados e Carregadores de Dados - ler denovo
+### 3 - Conjuntos de Dados e Carregadores de Dados - ler denovo
 
-### 3 - Transforma - ler denovo
+### 4 - Transforma - ler denovo
 
-### 4 - Construir Modelo - ler denovo
+### 5 - Construir Modelo - ler denovo
 
-### 4 - Diferenciação Automática -
+### 6 - Diferenciação Automática -
+
+no pytorch podemos fazerr o calculo do grardiente atuomaticamente usando um conceito de autograd
+o autograd nos permite calcular grardiente automaticamente de tensores
+
+```python
+# Input
 
 
+x = torch.ones(3, 3)
+y = torch.ones(3, 3, requires_grad=True)
+print(x)
+print(y)
+
+# Output
+tensor([[1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.]])
+tensor([[1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.]], requires_grad=True)
+```
+podemos tabem saberr qual operarcao aquele tensorr foi criado, usando o tensor.grad_fn
 
 
+```python
+# Input
+x = torch.ones(3, 3)
+y = torch.ones(3, 3, requires_grad=True)
+z = x * y
+zz = x @ y
+print(z.grad_fn)
+print(zz.grad_fn)
 
+# Output
+<MulBackward0 object at 0x7fc422703400>
+<MmBackward0 object at 0x7fc422703400>
+```
+podemos tabem iniciar o backpropagation em um tensor , com tensor.backward()
+ele tambem calcula o gradientes de tensorres que possui o o atribuito (requires_grad=True)
+
+
+```python
+# Input
+# Output
+```
+
+
+```python
+# Input
+# Output
+```
 
 
 
@@ -389,6 +435,14 @@ Modifique o NumPy usando `np.add(..., out=...)` e observe o impacto no tensor.
 # Input
 # Output
 ```
+
+
+
+```python
+# Input
+# Output
+```
+
 
 
 ```python
@@ -460,6 +514,27 @@ Tensor Creation Ops -------------------------------------------- torch.tensor()
                                                                  torch.full()
                                                                  torch.empty()
                                                                  torch.eye()
+
+```
+
+
+## FlashCard - 3
+
+```python
+
+ tensor.backward() ---------------------------------------------- Inicia o backpropagation e calcula os gradientes dos tensores que possuem o atributo requires_grad=True
+ tensor.grad_fn ------------------------------------------------- Retorna com qual operação o tensor foi criado
+ O que o Autograd faz ------------------------------------------- Calcula gradientes automaticamente usando a regra da cadeia
+ Como indicar que o tensor deve ter Autograd -------------------- torch.tensor([1, 2], requires_grad=True)
+ O Autograd cria um --------------------------------------------- DAG
+ O que é DAG ---------------------------------------------------- Directed Acyclic Graph (Grafo Acíclico Direcionado)
+ Qual atributo indica qual operação criou aquele tensor --------- .grad_fn
+ Como iniciar o backpropagation em um tensor -------------------- tensor.backward()
+
+ Conversão de dados externos para tersores ---------------------- torch.from_numpy()  - Converte um array NumPy em tensor
+                                                                  torch.from_dlpack() - Converte dados de outras bibliotecas compatíveis com DLPack
+                                                                  torch.frombuffer()  - Cria tensor a partir de um buffer de memória
+                                                                  torch.from_file()   - Cria tensor lendo dados de um arquivo
 
 ```
 
