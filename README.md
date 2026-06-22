@@ -5,7 +5,7 @@
 | ---------------------- | ----------------- |
 | Data de Início         | 14 /06 / 2026     |
 | Data de Finalizacao    | em progresso      |
-| Horas de Estudo        | 6h                | pomodoro (1h)
+| Horas de Estudo        | 8h                |
 | Exercícios Realizados  | 0                 |
 | Projetos Desenvolvidos | 0                 |
 | Tópicos Concluídos     | 0 / 8             |
@@ -13,16 +13,26 @@
 
 ## Módulo 1 — Fundamentos do PyTorch
 
-* [0. Início Rápido](https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html) - FlashCard 0 - ✅
-* [1. Tensores](https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html) - FlashCard 1 - ✅
-* [2. Conjuntos de Dados e Carregadores de Dados](https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html)
-* [3. Transforma](https://docs.pytorch.org/tutorials/beginner/basics/transforms_tutorial.html)
-* [4. Construir Modelo](https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html)
-* [5. Diferenciação Automática](https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html) - FlashCard 1 - ✅
-* [6. Loop de Otimização](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html)
-* [7. Salvar, Carregar e Usar o Modelo](https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html)
+* [0. Início Rápido](https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)                        - Leitura ✅ - Exercícios  x
+* [1. Tensores](https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html)                               - Leitura ✅ - Exercícios  x
+* [2. Conjuntos de Dados e Carregadores de Dados](https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html) - Leitura ✅ - Exercícios  x
+* [3. Transforma](https://docs.pytorch.org/tutorials/beginner/basics/transforms_tutorial.html)                           - Leitura ✅ - Exercícios  x
+* [4. Construir Modelo](https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html)                     - Leitura ✅ - Exercícios  x
+* [5. Diferenciação Automática](https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html)             - Leitura ✅ - Exercícios  x
+* [6. Loop de Otimização](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html)                 - Leitura ✅ - Exercícios  x
+* [7. Salvar, Carregar e Usar o Modelo](https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html)    - Leitura ✅ - Exercícios  x
 
 
+## Módulo 2 — Videos 
+
+* [Playlist](https://www.youtube.com/playlist?list=PL_lsbAsL_o2CTlGHgMxNrKhzP97BaG9ZN)                         
+    *  [0. introduction to PyTorch](https://www.youtube.com/playlist?list=PL_lsbAsL_o2CTlGHgMxNrKhzP97BaG9ZN )- ✅
+    *  [1. ]()
+    *  [2. ]()
+    *  [3. ]()
+
+## perguntas 
+    * oque PyTorchscript ?
 
 ### 1 - tensores
 
@@ -537,5 +547,22 @@ Tensor Creation Ops -------------------------------------------- torch.tensor()
                                                                   torch.from_file()   - Cria tensor lendo dados de um arquivo
 
 ```
+
+
+
+## FlashCard - 3
+
+```python
+
+O que significa batch_size ----------------------------- número de amostras
+Dicionário de parâmetros do modelo no PyTorch ---------- .state_dict()
+Como persistir dados do .state_dict() ------------------ torch.save
+Funções de perda comuns no PyTorch --------------------- torch.nn.MSELoss
+                                                         torch.nn.NLLLoss
+                                                         torch.nn.CrossEntropyLoss
+
+```
+
+
 
 
