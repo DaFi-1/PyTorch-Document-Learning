@@ -4,7 +4,7 @@
 | Métrica                | Valor             |
 | ---------------------- | ----------------- |
 | Data de Início         | 14 /06 / 2026     |
-| Data de Finalizacao    | em progresso      |
+| Data de Finalizacao    | Finalizdo         |
 | Horas de Estudo        | 8h                |
 | Exercícios Realizados  | 0                 |
 | Projetos Desenvolvidos | 0                 |
